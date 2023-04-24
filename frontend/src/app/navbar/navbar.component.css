@@ -1,0 +1,45 @@
+/* This styles the navigation bar container */
+nav {
+  display: flex; /* Use flexbox layout */
+  justify-content: space-between; /* Align items at each end of the container */
+  align-items: center; /* Vertically center items within the container */
+  background-color: #333; /* Set a background color */
+  height: 50px; /* Set a fixed height */
+  padding: 0 20px; /* Add padding to the left and right of the container */
+  border-radius: 5px; /* Add rounded corners */
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5); /* Add a drop shadow */
+}
+
+/* This styles the links within the navigation bar */
+a {
+  color: white; /* Set the text color */
+  text-align: center; /* Center the text horizontally */
+  text-decoration: none; /* Remove underlines from links */
+  border-radius: 5px; /* Add rounded corners */
+  width: 100%; /* Ensure all links have the same width */
+  transition: all 0.2s ease-in-out; /* Add a transition effect for smoother animation */
+}
+
+/* This styles the links when hovered over */
+a:hover {
+  background-color: #111; /* Change the background color */
+  padding: 12px 14px; /* Add some padding */
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5); /* Add a drop shadow */
+  transform: scale(0.9); /* Scale down the link */
+  position: relative; /* Set the position to relative */
+  z-index: 1; /* Set a higher z-index to ensure the hovered link appears on top */
+}
+
+/* This styles the active link */
+a.active {
+  background-color: #4caf50; /* Set the background color */
+  border: 2px solid white; /* Add a border */
+  padding: 12px 14px; /* Add some padding */
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5); /* Add a drop shadow */
+}
+
+/* This scales down the non-hovered links and reduces their opacity when the navigation bar is hovered over */
+nav:hover a:not(:hover) {
+  transform: scale(0.95); /* Scale down the non-hovered links */
+  opacity: 0.7; /* Reduce the opacity of the non-hovered links */
+}
